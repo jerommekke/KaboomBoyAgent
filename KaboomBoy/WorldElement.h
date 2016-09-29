@@ -13,6 +13,9 @@ namespace KaboomBoy {
     class WorldElement
     {
     public:
+        WorldElement() {}
+        virtual ~WorldElement() {}
+        
         static WorldElement* create(char asciiChar, WorldElement* previousTurn);
         
         virtual bool walkable() = 0;
@@ -22,9 +25,10 @@ namespace KaboomBoy {
         virtual bool bomb() = 0;
         
     protected:
-        virtual void update() = 0;
+        
         
     private:
+        WorldElement *createElement(char asciiChar);
         
     };
     
@@ -36,6 +40,8 @@ namespace KaboomBoy {
         virtual bool destroyable() { return false; }
         virtual bool agent()       { return false; }
         virtual bool bomb()        { return false; }
+        
+        static Indestructible *update(WorldElement *previous);
     };
     
     class WalkWay : public WorldElement
@@ -47,13 +53,15 @@ namespace KaboomBoy {
         virtual bool agent()       { return false; }
         virtual bool bomb()        { return false; }
 
+        static WalkWay *update(WorldElement *previous);
+        
     };
     
     
     class Bomb : public WalkWay
     {
     public:
-        Bomb() : mTurnsBeforeBoom(3), mPower(3) {}
+        Bomb(int power = 3) : mTurnsBeforeBoom(3), mPower(power) {}
         
         virtual void update() { mTurnsBeforeBoom--; }
         int turnsLeft() const { return mTurnsBeforeBoom; }
@@ -61,6 +69,8 @@ namespace KaboomBoy {
         
         virtual bool occupied()    { return true; }
         virtual bool bomb()        { return true; }
+        
+        static Bomb *update(WorldElement *previous);
         
     private:
         int mTurnsBeforeBoom;
@@ -72,6 +82,8 @@ namespace KaboomBoy {
     public:
         virtual bool occupied()    { return true; }
         virtual bool destroyable() { return true; }
+        
+        static Destructible *update(WorldElement *previous);
     };
     
     class Explosion : public WalkWay
@@ -79,14 +91,23 @@ namespace KaboomBoy {
     public:
         virtual bool occupied()    { return true; }
         virtual bool destroyable() { return false; }
+        
+        static Explosion *update(WorldElement *previous);
     };
     
     class Agent : public WalkWay
     {
     public:
+        Agent(char identity) : mIdentity(identity) {}
+        
         virtual bool occupied()    { return true; }
         virtual bool destroyable() { return true; }
         virtual bool agent()       { return true; }
+        
+        int bombPower() const { return 3; }
+        static Agent *update(WorldElement *previous, char asciiChar);
+    private:
+        char mIdentity;
 
     };
     

@@ -19,10 +19,19 @@ namespace KaboomBoy
     class World
     {
     public:
-        World(std::istream reader);
+        World();
+        ~World();
+        
+        // Not meant to have more than one
+        World(const World& other) = delete;
+        World& operator=(const World& other) = delete;
+        
+        void parse(std::istream& reader);
+        
+        
         
     private:
-        std::vector< std::vector< WorldElement > > mWorldGrid;
+        std::vector< std::vector< WorldElement * > > mWorldGrid;
         
         
     };
