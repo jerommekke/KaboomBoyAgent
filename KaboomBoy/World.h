@@ -6,9 +6,27 @@
 //  Copyright © 2016 JeromeSchalkwijk. All rights reserved.
 //
 
-#ifndef World_hpp
-#define World_hpp
+#ifndef World_h
+#define World_h
 
-#include <stdio.h>
+#include <iostream>
+#include <vector>
 
-#endif /* World_hpp */
+#include "WorldELement.h"
+
+namespace KaboomBoy
+{
+    class World
+    {
+    public:
+        World(std::istream reader);
+        
+    private:
+        std::vector< std::vector< WorldElement > > mWorldGrid;
+        
+        
+    };
+    
+}
+
+#endif /* World_h */
