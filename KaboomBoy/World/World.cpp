@@ -12,20 +12,7 @@
 
 namespace KaboomBoy
 {
-    World::World()
-    {
-        
-    }
-    
-    World::~World()
-    {
-        for (const auto& x : mWorldGrid )
-        {
-            for (const WorldElement *elem : x)
-                delete elem;
-        }
-    }
-    
+
     void World::parse(std::istream& reader)
     {
         
@@ -33,17 +20,18 @@ namespace KaboomBoy
         for( unsigned int i = 0; std::getline(reader, line); ++i )
         {
             // resize if required
-            if (i >= mWorldGrid.size()) mWorldGrid.push_back( std::vector<WorldElement *>() );
+            if (i >= mWorldGrid.size()) mWorldGrid.push_back( worldrow_t() );
             
             for (auto j = 0; j < line.size(); ++j)
             {
                 // resize if required
-                if (j >= mWorldGrid[i].size()) mWorldGrid[i].push_back(nullptr);
+                if (j >= mWorldGrid[i].size()) mWorldGrid[i].push_back( { nullptr, WorldElementStore::NoOwnership } );
                 
-                mWorldGrid[i][j] = WorldElement::create(line[j], mWorldGrid[i][j]);
+                mWorldGrid[i][j] = { WorldElement::create(line[j], mWorldGrid[i][j]), WorldElementStore::Delete };
             }
         }
     }
+    
     
     
     
