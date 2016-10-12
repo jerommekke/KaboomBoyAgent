@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02289DAC1DAEC216005C1312 /* DefiniteFuture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DAA1DAEC216005C1312 /* DefiniteFuture.cpp */; };
 		02289DB11DAEC3DF005C1312 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DAF1DAEC3DF005C1312 /* Controller.cpp */; };
+		02289DB41DAECD5C005C1312 /* WorldElementStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DB21DAECD5C005C1312 /* WorldElementStore.cpp */; };
 		0229E97D1D9C3F8900D64FF2 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0229E97B1D9C3F8900D64FF2 /* World.cpp */; };
 		0229E9801D9CE95100D64FF2 /* WorldElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0229E97E1D9CE95100D64FF2 /* WorldElement.cpp */; };
 		02D62F681D9C3D73001CDABC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02D62F671D9C3D73001CDABC /* main.cpp */; };
@@ -32,6 +33,8 @@
 		02289DAB1DAEC216005C1312 /* DefiniteFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefiniteFuture.h; sourceTree = "<group>"; };
 		02289DAF1DAEC3DF005C1312 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		02289DB01DAEC3DF005C1312 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		02289DB21DAECD5C005C1312 /* WorldElementStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldElementStore.cpp; sourceTree = "<group>"; };
+		02289DB31DAECD5C005C1312 /* WorldElementStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldElementStore.h; sourceTree = "<group>"; };
 		0229E97B1D9C3F8900D64FF2 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		0229E97C1D9C3F8900D64FF2 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
 		0229E97E1D9CE95100D64FF2 /* WorldElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldElement.cpp; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				0229E97C1D9C3F8900D64FF2 /* World.h */,
 				0229E97E1D9CE95100D64FF2 /* WorldElement.cpp */,
 				0229E97F1D9CE95100D64FF2 /* WorldElement.h */,
+				02289DB21DAECD5C005C1312 /* WorldElementStore.cpp */,
+				02289DB31DAECD5C005C1312 /* WorldElementStore.h */,
 			);
 			path = World;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0229E9801D9CE95100D64FF2 /* WorldElement.cpp in Sources */,
+				02289DB41DAECD5C005C1312 /* WorldElementStore.cpp in Sources */,
 				0229E97D1D9C3F8900D64FF2 /* World.cpp in Sources */,
 				02289DB11DAEC3DF005C1312 /* Controller.cpp in Sources */,
 				02289DAC1DAEC216005C1312 /* DefiniteFuture.cpp in Sources */,

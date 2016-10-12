@@ -39,6 +39,8 @@ namespace KaboomBoy
         
         mDefiniteFuture.calculateFutures(mWorld);
         
+        std::cerr << "..done\n";
+        
     }
     
     
