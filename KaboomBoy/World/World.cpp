@@ -47,6 +47,10 @@ namespace KaboomBoy
                 //TODO: this is a leak! We don't know which are shallow and which are deep copies
                 elem = { ((WorldElement *)elem)->advanceTurn(&propagateDistance, &update), WorldElementStore::Ownership::NoOwnership };
                 
+                //TODO use the propogation distance
+                // Probably store a tmp array with prop distances and then
+                // handle propogation in another go, so that we dont propogate into un-updated stuff
+                
                 doUpdate = doUpdate || update;
             }
     
