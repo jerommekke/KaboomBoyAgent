@@ -33,6 +33,24 @@ namespace KaboomBoy
     }
     
     
+    bool World::advanceTurn()
+    {
+        bool doUpdate = false;
+        
+        for (auto& row : mWorldGrid)
+            for (auto& elem : row)
+            {
+                // step forward the element
+                int propagateDistance = 0;
+                bool update = false;
+                
+                //TODO: this is a leak! We don't know which are shallow and which are deep copies
+                elem = { ((WorldElement *)elem)->advanceTurn(&propagateDistance, &update), WorldElementStore::Ownership::NoOwnership };
+                
+                doUpdate = doUpdate || update;
+            }
     
+        return doUpdate;
+    }
     
 }

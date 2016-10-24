@@ -8,6 +8,14 @@
 
 #include "WorldElement.h"
 
+#include "Elements/Indestructible.h"
+#include "Elements/Walkway.h"
+#include "Elements/Destructible.h"
+#include "Elements/Agent.h"
+#include "Elements/Bomb.h"
+#include "Elements/Explosion.h"
+
+
 namespace KaboomBoy
 {
     
@@ -33,76 +41,7 @@ namespace KaboomBoy
                 
         }
     }
-    
-    template<typename T>
-    T *simpleUpdate(WorldElement *previous)
-    {
-        if (previous == nullptr)
-            return new T();
-        if (T *prev = dynamic_cast<T *>(previous))
-        {
-            return prev;
-        }
-        else
-        {
-            delete previous;
-            return new T();
-        }
-
-    }
-    
-    
-    Indestructible *Indestructible::update(WorldElement *previous)
-    {
-        return simpleUpdate<Indestructible>(previous);
-    }
-    
-    Destructible *Destructible::update(WorldElement *previous)
-    {
-        return simpleUpdate<Destructible>(previous);
-    }
-    
-    WalkWay *WalkWay::update(WorldElement *previous)
-    {
-        return simpleUpdate<WalkWay>(previous);
-    }
-    
-    Agent *Agent::update(WorldElement *previous, char asciiChar)
-    {
-        // Do powerups here if previous had a powerup
-        if (previous == nullptr)
-            return new Agent(asciiChar);
-        if (Agent *prev = dynamic_cast<Agent *>(previous))
-        {
-            if (prev->mIdentity == asciiChar) return prev;
-        }
-        
-        delete previous;
-        return new Agent(asciiChar);
-        
-    }
-    
-    Bomb *Bomb::update(WorldElement *previous)
-    {
-        if (previous == nullptr)
-            return new Bomb();
-        
-        if (Agent *prev = dynamic_cast<Agent *>(previous))
-        {
-            Bomb *newBomb = new Bomb(prev->bombPower());
-            delete prev;
-            return newBomb;
-        }
-        
-        delete previous;
-        return new Bomb();
-
-    }
-    
-    Explosion *Explosion::update(WorldElement *previous)
-    {
-        return simpleUpdate<Explosion>(previous); 
-    }
+       
     
 }
 

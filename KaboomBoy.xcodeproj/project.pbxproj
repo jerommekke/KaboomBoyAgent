@@ -10,6 +10,12 @@
 		02289DAC1DAEC216005C1312 /* DefiniteFuture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DAA1DAEC216005C1312 /* DefiniteFuture.cpp */; };
 		02289DB11DAEC3DF005C1312 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DAF1DAEC3DF005C1312 /* Controller.cpp */; };
 		02289DB41DAECD5C005C1312 /* WorldElementStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DB21DAECD5C005C1312 /* WorldElementStore.cpp */; };
+		02289DB81DBEB477005C1312 /* Indestructible.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DB61DBEB477005C1312 /* Indestructible.cpp */; };
+		02289DBB1DBEB4D6005C1312 /* Walkway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DB91DBEB4D6005C1312 /* Walkway.cpp */; };
+		02289DBE1DBEB505005C1312 /* Bomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DBC1DBEB505005C1312 /* Bomb.cpp */; };
+		02289DC11DBEB55E005C1312 /* Destructible.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DBF1DBEB55E005C1312 /* Destructible.cpp */; };
+		02289DC41DBEB585005C1312 /* Explosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DC21DBEB585005C1312 /* Explosion.cpp */; };
+		02289DC71DBEB5AE005C1312 /* Agent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02289DC51DBEB5AE005C1312 /* Agent.cpp */; };
 		0229E97D1D9C3F8900D64FF2 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0229E97B1D9C3F8900D64FF2 /* World.cpp */; };
 		0229E9801D9CE95100D64FF2 /* WorldElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0229E97E1D9CE95100D64FF2 /* WorldElement.cpp */; };
 		02D62F681D9C3D73001CDABC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02D62F671D9C3D73001CDABC /* main.cpp */; };
@@ -35,6 +41,19 @@
 		02289DB01DAEC3DF005C1312 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		02289DB21DAECD5C005C1312 /* WorldElementStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldElementStore.cpp; sourceTree = "<group>"; };
 		02289DB31DAECD5C005C1312 /* WorldElementStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldElementStore.h; sourceTree = "<group>"; };
+		02289DB61DBEB477005C1312 /* Indestructible.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Indestructible.cpp; sourceTree = "<group>"; };
+		02289DB71DBEB477005C1312 /* Indestructible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Indestructible.h; sourceTree = "<group>"; };
+		02289DB91DBEB4D6005C1312 /* Walkway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Walkway.cpp; sourceTree = "<group>"; };
+		02289DBA1DBEB4D6005C1312 /* Walkway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Walkway.h; sourceTree = "<group>"; };
+		02289DBC1DBEB505005C1312 /* Bomb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bomb.cpp; sourceTree = "<group>"; };
+		02289DBD1DBEB505005C1312 /* Bomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bomb.h; sourceTree = "<group>"; };
+		02289DBF1DBEB55E005C1312 /* Destructible.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Destructible.cpp; sourceTree = "<group>"; };
+		02289DC01DBEB55E005C1312 /* Destructible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destructible.h; sourceTree = "<group>"; };
+		02289DC21DBEB585005C1312 /* Explosion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Explosion.cpp; sourceTree = "<group>"; };
+		02289DC31DBEB585005C1312 /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explosion.h; sourceTree = "<group>"; };
+		02289DC51DBEB5AE005C1312 /* Agent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Agent.cpp; sourceTree = "<group>"; };
+		02289DC61DBEB5AE005C1312 /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
+		02289DC81DBEB64B005C1312 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		0229E97B1D9C3F8900D64FF2 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
 		0229E97C1D9C3F8900D64FF2 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
 		0229E97E1D9CE95100D64FF2 /* WorldElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldElement.cpp; sourceTree = "<group>"; };
@@ -67,6 +86,7 @@
 		02289DAD1DAEC3AA005C1312 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				02289DB51DBEB444005C1312 /* Elements */,
 				0229E97B1D9C3F8900D64FF2 /* World.cpp */,
 				0229E97C1D9C3F8900D64FF2 /* World.h */,
 				0229E97E1D9CE95100D64FF2 /* WorldElement.cpp */,
@@ -75,6 +95,26 @@
 				02289DB31DAECD5C005C1312 /* WorldElementStore.h */,
 			);
 			path = World;
+			sourceTree = "<group>";
+		};
+		02289DB51DBEB444005C1312 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				02289DB61DBEB477005C1312 /* Indestructible.cpp */,
+				02289DB71DBEB477005C1312 /* Indestructible.h */,
+				02289DB91DBEB4D6005C1312 /* Walkway.cpp */,
+				02289DBA1DBEB4D6005C1312 /* Walkway.h */,
+				02289DBC1DBEB505005C1312 /* Bomb.cpp */,
+				02289DBD1DBEB505005C1312 /* Bomb.h */,
+				02289DBF1DBEB55E005C1312 /* Destructible.cpp */,
+				02289DC01DBEB55E005C1312 /* Destructible.h */,
+				02289DC21DBEB585005C1312 /* Explosion.cpp */,
+				02289DC31DBEB585005C1312 /* Explosion.h */,
+				02289DC51DBEB5AE005C1312 /* Agent.cpp */,
+				02289DC61DBEB5AE005C1312 /* Agent.h */,
+				02289DC81DBEB64B005C1312 /* util.h */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 		02D62F5B1D9C3D72001CDABC = {
@@ -162,12 +202,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02289DBE1DBEB505005C1312 /* Bomb.cpp in Sources */,
+				02289DC11DBEB55E005C1312 /* Destructible.cpp in Sources */,
 				0229E9801D9CE95100D64FF2 /* WorldElement.cpp in Sources */,
 				02289DB41DAECD5C005C1312 /* WorldElementStore.cpp in Sources */,
 				0229E97D1D9C3F8900D64FF2 /* World.cpp in Sources */,
 				02289DB11DAEC3DF005C1312 /* Controller.cpp in Sources */,
+				02289DBB1DBEB4D6005C1312 /* Walkway.cpp in Sources */,
 				02289DAC1DAEC216005C1312 /* DefiniteFuture.cpp in Sources */,
+				02289DB81DBEB477005C1312 /* Indestructible.cpp in Sources */,
+				02289DC71DBEB5AE005C1312 /* Agent.cpp in Sources */,
 				02D62F681D9C3D73001CDABC /* main.cpp in Sources */,
+				02289DC41DBEB585005C1312 /* Explosion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

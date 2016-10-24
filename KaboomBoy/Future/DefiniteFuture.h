@@ -28,8 +28,6 @@ namespace KaboomBoy
         void calculateFutures(const World& currentWorld);
         
     private:
-        int mFutureDepth;
-        
         std::list< futures_t > mFutures;
         
     };

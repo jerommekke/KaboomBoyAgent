@@ -10,6 +10,7 @@
 #define IFuture_h
 
 #include <list>
+#include "World.h"
 
 namespace KaboomBoy
 {
@@ -20,7 +21,7 @@ namespace KaboomBoy
     class IFuture
     {
     public:
-        typedef std::list<const World *> futures_t;
+        typedef std::list<const World> futures_t;
         
         virtual ~IFuture() {}
         

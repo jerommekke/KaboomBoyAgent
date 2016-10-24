@@ -24,6 +24,8 @@ namespace KaboomBoy {
         virtual bool agent() = 0;
         virtual bool bomb() = 0;
         
+        virtual WorldElement* advanceTurn(int *propagateDistance, bool *update) = 0;
+        virtual WorldElement* propogateFrom(WorldElement *source) = 0;
     protected:
         
         
@@ -32,85 +34,7 @@ namespace KaboomBoy {
         
     };
     
-    class Indestructible : public WorldElement
-    {
-    public:
-        virtual bool walkable()    { return false; }
-        virtual bool occupied()    { return false; }
-        virtual bool destroyable() { return false; }
-        virtual bool agent()       { return false; }
-        virtual bool bomb()        { return false; }
-        
-        static Indestructible *update(WorldElement *previous);
-    };
-    
-    class WalkWay : public WorldElement
-    {
-    public:
-        virtual bool walkable()    { return true; }
-        virtual bool occupied()    { return false; }
-        virtual bool destroyable() { return true; }
-        virtual bool agent()       { return false; }
-        virtual bool bomb()        { return false; }
-
-        static WalkWay *update(WorldElement *previous);
-        
-    };
-    
-    
-    class Bomb : public WalkWay
-    {
-    public:
-        Bomb(int power = 3) : mTurnsBeforeBoom(3), mPower(power) {}
-        
-        virtual void update() { mTurnsBeforeBoom--; }
-        int turnsLeft() const { return mTurnsBeforeBoom; }
-        int power()     const { return mPower; }
-        
-        virtual bool occupied()    { return true; }
-        virtual bool bomb()        { return true; }
-        
-        static Bomb *update(WorldElement *previous);
-        
-    private:
-        int mTurnsBeforeBoom;
-        int mPower;  // number of elements the explosion will reach
-    };
-    
-    class Destructible : public WalkWay
-    {
-    public:
-        virtual bool occupied()    { return true; }
-        virtual bool destroyable() { return true; }
-        
-        static Destructible *update(WorldElement *previous);
-    };
-    
-    class Explosion : public WalkWay
-    {
-    public:
-        virtual bool occupied()    { return true; }
-        virtual bool destroyable() { return false; }
-        
-        static Explosion *update(WorldElement *previous);
-    };
-    
-    class Agent : public WalkWay
-    {
-    public:
-        Agent(char identity) : mIdentity(identity) {}
-        
-        virtual bool occupied()    { return true; }
-        virtual bool destroyable() { return true; }
-        virtual bool agent()       { return true; }
-        
-        int bombPower() const { return 3; }
-        static Agent *update(WorldElement *previous, char asciiChar);
-    private:
-        char mIdentity;
-
-    };
-    
+ 
 
 }
 

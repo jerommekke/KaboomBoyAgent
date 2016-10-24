@@ -27,6 +27,12 @@ namespace KaboomBoy
         void parse(std::istream& reader);
         
         
+        /**
+         * Advance the world one step. Only steps forward that what it believes is definitely the future
+         * @return returns whether the update changed something
+         */
+        bool advanceTurn();
+        
     private:
         typedef std::vector< WorldElementStore > worldrow_t;
         typedef std::vector< worldrow_t > worldgrid_t;

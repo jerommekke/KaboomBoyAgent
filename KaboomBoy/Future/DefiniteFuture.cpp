@@ -8,10 +8,11 @@
 
 #include "DefiniteFuture.h"
 
+#include "World.h"
+
 namespace KaboomBoy
 {
-    DefiniteFuture::DefiniteFuture() :
-        mFutureDepth(0)
+    DefiniteFuture::DefiniteFuture()
     {
     }
     
@@ -26,7 +27,7 @@ namespace KaboomBoy
     
     int DefiniteFuture::futureDepth()
     {
-        return mFutureDepth;
+        return (int)mFutures.size();
     }
     
     void DefiniteFuture::calculateFutures(const World& currentWorld)
@@ -34,15 +35,14 @@ namespace KaboomBoy
         // Clear futures and restart
         mFutures.clear();
         
-        // Start calculating futures
-        bool nextTurnHasDefiniteFuture = true;
-        
-        // FIrst make a copy of the world
-        
-        
-        
+        // Calculate futures while the future yields actual information
+        for ( World nextTurn = currentWorld; nextTurn.advanceTurn();  )
+        {
+            mFutures.push_back( futures_t(1, nextTurn) );
+        }
         
     }
+    
     
     
     
