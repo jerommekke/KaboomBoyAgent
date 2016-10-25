@@ -53,7 +53,7 @@ namespace KaboomBoy {
         }
     }
     
-    WorldElement *Bomb::propogateFrom(WorldElement *source)
+    WorldElement *Bomb::propagateFrom(WorldElement *source)
     {
         if (dynamic_cast<Explosion *>(source))
             return source;

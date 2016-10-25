@@ -23,7 +23,7 @@ namespace KaboomBoy
         virtual bool bomb()        { return false; }
         
         virtual WorldElement* advanceTurn(int *propagateDistance, bool *update);
-        virtual WorldElement* propogateFrom(WorldElement *source);
+        virtual WorldElement* propagateFrom(WorldElement *source);
         
         static Indestructible *update(WorldElement *previous);
     };

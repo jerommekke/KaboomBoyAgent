@@ -36,7 +36,7 @@ namespace KaboomBoy {
         return new WalkWay();
     }
     
-    WorldElement* Agent::propogateFrom(WorldElement *source)
+    WorldElement* Agent::propagateFrom(WorldElement *source)
     {
         if (dynamic_cast<Explosion *>(source))
             return source;

@@ -24,7 +24,7 @@ namespace KaboomBoy
         static Explosion *update(WorldElement *previous);
         
         virtual WorldElement* advanceTurn(int *propagateDistance, bool *update);
-        virtual WorldElement* propogateFrom(WorldElement *source);
+        virtual WorldElement* propagateFrom(WorldElement *source);
         
     };
     

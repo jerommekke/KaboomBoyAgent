@@ -25,7 +25,7 @@ namespace KaboomBoy
         return new WalkWay();
     }
     
-    WorldElement* Explosion::propogateFrom(WorldElement *source)
+    WorldElement* Explosion::propagateFrom(WorldElement *source)
     {
         // unaffected
         return this;

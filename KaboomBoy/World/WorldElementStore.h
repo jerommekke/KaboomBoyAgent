@@ -40,6 +40,7 @@ namespace KaboomBoy
         
         // Allow the world element to be directly castable to a WorldElement
         operator WorldElement*() { return element; }
+        WorldElement *operator->() { return element; }
         
     private:
         WorldElement *element;

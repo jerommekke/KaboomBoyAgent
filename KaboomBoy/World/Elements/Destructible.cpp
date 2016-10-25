@@ -25,7 +25,7 @@ namespace KaboomBoy
         return this;
     }
     
-    WorldElement* Destructible::propogateFrom(WorldElement *source)
+    WorldElement* Destructible::propagateFrom(WorldElement *source)
     {
         // If explosion, affected!
         if (dynamic_cast<Explosion *>(source))

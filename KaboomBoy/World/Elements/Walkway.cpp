@@ -22,10 +22,10 @@ namespace KaboomBoy
     {
         *propagateDistance = 0;
         *update = 0;
-        return this;
+        return nullptr;
     }
     
-    WorldElement* WalkWay::propogateFrom(WorldElement *source)
+    WorldElement* WalkWay::propagateFrom(WorldElement *source)
     {
         // If explosion, affected!
         if (dynamic_cast<Explosion *>(source))

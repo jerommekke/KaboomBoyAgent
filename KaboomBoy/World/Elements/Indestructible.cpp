@@ -25,7 +25,7 @@ namespace KaboomBoy
         return this;
     }
     
-    WorldElement* Indestructible::propogateFrom(WorldElement *source)
+    WorldElement* Indestructible::propagateFrom(WorldElement *source)
     {
         // unaffected
         return this;

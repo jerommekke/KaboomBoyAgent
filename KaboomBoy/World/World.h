@@ -39,6 +39,7 @@ namespace KaboomBoy
         
         worldgrid_t mWorldGrid;
         
+        std::vector< std::vector< int > > mPropagateDist; 
         
     };
     

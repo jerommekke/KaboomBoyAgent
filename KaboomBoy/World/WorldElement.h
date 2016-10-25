@@ -25,7 +25,7 @@ namespace KaboomBoy {
         virtual bool bomb() = 0;
         
         virtual WorldElement* advanceTurn(int *propagateDistance, bool *update) = 0;
-        virtual WorldElement* propogateFrom(WorldElement *source) = 0;
+        virtual WorldElement* propagateFrom(WorldElement *source) = 0;
     protected:
         
         
